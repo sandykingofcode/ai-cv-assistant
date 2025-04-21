@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+N e e d   t o   i n s t a l l   t h e   f o l l o w i n g   p a c k a g e s :  
+ s h x @ 0 . 4 . 0  
+ O k   t o   p r o c e e d ?   ( y )    
+ n o d e _ m o d u l e s 
+
+node_modules/
+dist/
+.env
+.vscode/
+ 
+ 
