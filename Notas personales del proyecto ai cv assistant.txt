@@ -1,0 +1,40 @@
+D:\PROGRAMMING\WORKSPACES
+
+
+
+
+import react from '@vitejs/plugin-react'
+
+
+
+ai-cv-assistant
+>node_modules
+>public
+>src
+(dentro de src:
+>assets (empty)
+>App.jsx
+>index.css
+>main.jsx
+final de src)
+eslint.config.js
+index.html
+package-lock.json
+package.json
+postcss.config.js
+README.md
+tailwind.config.js
+vite.config.js
+
+
+There you go. Recuerda siempre esta estructura asi a lo largo del desarrollo de mi app puedes saber que me falta agregar y donde esta cada cosa. Dejame saber si necesito enviarte el contenido de cada uno, aunque creo que no sera necesario ya que quiero adecuar el codigo que estaba haciendo en VS Code Puro ahora a esta nueva version con React + Vite + TailwindCSS.
+
+-----------------------------
+
+React como framework principal
+
+Vite como bundler para un workflow rápido
+
+Tailwind CSS para los estilos
+
+Sin TypeScript (JavaScript estándar)

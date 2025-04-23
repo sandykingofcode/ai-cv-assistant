@@ -1,14 +1,21 @@
+/*import React from "react";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
-  
-
-  return (
-    <>
-      <h1 className="text-5x1 font-bold underline" font-bold underline>
-        Sup World</h1>
-      
-    </>
-  )
+  return <LandingPage />;
 }
 
-export default App
+export default App;*/
+
+
+import Assistant from './pages/Assistant';
+
+function App() {
+  return (
+    <div>
+      <Assistant />
+    </div>
+  );
+}
+
+export default App;
