@@ -30,6 +30,19 @@ const Assistant = () => {
   const [skills, setSkills] = useState([]);
   const [hobbies, setHobbies] = useState([]);
 
+    // Estado para foto de perfil
+    const [personalPhoto, setPersonalPhoto] = useState(null);
+
+    // Handler para subir la imagen
+    const handlePhotoUpload = (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = () => setPersonalPhoto(reader.result);
+      reader.readAsDataURL(file);
+    };
+  
+
   // Handle personal info changes
   const handlePersonalInfoChange = (e) => {
     const { name, value } = e.target;
@@ -437,14 +450,42 @@ const Assistant = () => {
               {mode === "cv" ? (
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-6 mb-8">
-                    <div className="w-32 h-32 bg-gray-200 rounded-full overflow-hidden">
-                      {/* Placeholder for profile photo */}
-                    </div>
-                    <div>
-                      <h1 className="text-4xl font-bold">{personalInfo.fullName || "Tu Nombre"}</h1>
-                      <p className="text-xl text-gray-600">{personalInfo.title || "Tu Título Profesional"}</p>
-                    </div>
-                  </div>
+  {/* Bloque interactivo de foto */}
+  <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center group cursor-pointer">
+    {personalPhoto ? (
+      <img
+        src={personalPhoto}
+        alt="Foto de perfil"
+        className="w-full h-full object-cover"
+      />
+    ) : (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 text-gray-500 group-hover:text-gray-700"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+          d="M3 7h4l3-3h4l3 3h4v12H3V7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+          d="M12 11v6m3-3H9" />
+      </svg>
+    )}
+    <input
+      type="file"
+      accept="image/*"
+      className="absolute inset-0 opacity-0 cursor-pointer"
+      onChange={handlePhotoUpload}
+    />
+  </div>
+
+  <div>
+    <h1 className="text-4xl font-bold">{personalInfo.fullName || "Tu Nombre"}</h1>
+    <p className="text-xl text-gray-600">{personalInfo.title || "Tu Título Profesional"}</p>
+  </div>
+</div>
+
 
                   <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-1">
