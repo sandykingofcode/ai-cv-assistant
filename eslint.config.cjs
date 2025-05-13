@@ -4,7 +4,7 @@ const reactHooks = require('eslint-plugin-react-hooks');
 const reactRefresh = require('eslint-plugin-react-refresh');
 
 module.exports = [
-  { ignores: ['dist'] },
+{ ignores: ['dist'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
